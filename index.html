@@ -4,90 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turismo en Machu Picchu</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        header {
-            background-color: #2e8b57;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background: #333;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        section {
-            padding: 20px;
-        }
-        img {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 10px;
-            display: block;
-            margin: 10px auto;
-        }
-        table {
-            width: 80%;
-            margin: 20px auto;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid #333;
-        }
-        th, td {
-            padding: 10px;
-            text-align: center;
-        }
-        iframe {
-            display: block;
-            margin: 20px auto;
-            border: none;
-        }
-        footer {
-            background: #2e8b57;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
+    <!-- Conectando con mi css -->
+    <link rel="Stylesheet" href="Styles.css" >
 </head>
 <body>
-    <header>
-        <h1>Bienvenido a Machu Picchu</h1>
-        <p>Una de las 7 maravillas del mundo moderno</p>
-    </header>
+        <header>
+            <h1>Bienvenido a Machu Picchu</h1>
+        </header>
 
-    <nav>
-        <a href="#historia">Historia</a>
-        <a href="#costos">Costos</a>
-        <a href="#mapa">Mapa</a>
-        <a href="#video">Video</a>
-    </nav>
-
-    <section id="historia">
-        <h2>Historia y Descripción</h2>
-        <p>
-            Machu Picchu es una ciudadela inca ubicada en las alturas de la cordillera de los Andes en Perú, 
-            construida en el siglo XV y posteriormente abandonada. 
-            Es famosa por sus sofisticadas paredes de piedra seca que combinan enormes bloques sin el uso de mortero, 
-            edificios fascinantes y vistas panorámicas.
-        </p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Machu_Picchu%2C_Peru.jpg" alt="Machu Picchu">
+        <nav>
+            <a href="#historia">Historia</a>
+            <a href="#costos">Costos</a>
+            <a href="#mapa">Mapa</a>
+            <a href="#video">Video</a>
+        </nav>
+        <section id="imagenPortada">
+        <img src="imagenes/MACHUPICCU.jpg" alt="imagenMachupiccu">
+        </section>
+        <section id="historia">
+            <h2>Historia y Descripción</h2>
+            <p>
+                Machu Picchu es una ciudadela inca ubicada en las alturas de la cordillera de los Andes en Perú, 
+                construida en el siglo XV y posteriormente abandonada. 
+                Es famosa por sus sofisticadas paredes de piedra seca que combinan enormes bloques sin el uso de mortero, 
+                edificios fascinantes y vistas panorámicas.
+            </p>
     </section>
-
     <section id="costos">
         <h2>Costos de Viaje</h2>
         <table>
@@ -108,7 +50,7 @@
                 <td>35</td>
             </tr>
             <tr>
-                <td>Transporte en tren gatis</td>
+                <td>Transporte en tren</td>
                 <td>60</td>
             </tr>
         </table>
@@ -131,5 +73,8 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Turismo Per
+        <p>&copy; 2025 Turismo Perú. Todos los derechos reservados.</p>
+    </footer>
+</body>
 
+</html>
