@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CAFEE ANGEL</title>
+  <link rel="stylesheet" href="Styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#" class="logo">
+      <div class="mark">☕</div>
+      <span class="brand">CAFEE ANGEL</span>
+    </a>
+
+    <div class="menu">
+      <a href="#about">Sobre nosotros</a>
+      <a href="#menu">Menú</a>
+      <a href="#contact">Contáctanos</a>
+    </div>
+  </nav>
+
+  <!-- HERO (usa tu imagen local en la ruta indicada) -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Comidas frescas · Ambiente acogedor</div>
+      <h1>CAFEE ANGEL</h1>
+      <p class="lead">Disfruta del mejor café artesanal, recién molido, con el aroma y sabor que te harán volver.</p>
+      <div class="hero-cta">
+        <a href="#menu" class="btn">Ver Menú</a>
+        <a href="#pedido" class="btn ghost">Haz tu pedido</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="about" class="about-section">
+      <div class="container about-grid">
+        <div class="about-text">
+          <h2>Sobre nosotros</h2>
+          <p>
+            En <strong>CAFEE ANGEL</strong> celebramos la tradición cafetera con un toque moderno.
+            Nuestros baristas preparan cada taza con dedicación, usando granos peruanos seleccionados.
+          </p>
+          <p>
+            Ofrecemos un ambiente acogedor ideal para trabajar, conversar o relajarte. Ven y prueba
+            nuestros postres caseros y bebidas de temporada.
+          </p>
+        </div>
+
+        <div class="about-image">
+          <img src="imagenes/cafeteriatradicional.jpg" alt="Interior de la cafetería — CAFEE ANGEL">
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ 3x3 (simétrico) -->
+    <section id="menu" class="menu-section">
+      <div class="container">
+        <h2>Menú destacado</h2>
+
+        <div class="menu-grid">
+          <div class="menu-item">
+            <img src="imagenes/red.jpg" alt="Red Velvet Cupcake">
+            <div class="item-info"><strong>Red Velvet Cupcake</strong><span>S/ 12</span></div>
+          </div>
+
+          <div class="menu-item">
+            <img src="imagenes/cafelate.jpg" alt="Café Latte">
+            <div class="item-info"><strong>Café Latte</strong><span>S/ 8</span></div>
+          </div>
+
+          <div class="menu-item">
+            <img src="imagenes/Cheesecake.jpg" alt="Cheesecake">
+            <div class="item-info"><strong>Cheesecake</strong><span>S/ 12</span></div>
+          </div>
+
+          <div class="menu-item">
+            <img src="imagenes/Smoothie de Fresa.jpg" alt="Smoothie de Fresa">
+            <div class="item-info"><strong>Smoothie de Fresa</strong><span>S/ 10</span></div>
+          </div>
+
+          <div class="menu-item">
+            <img src="imagenes/Empanada.jpg" alt="Empanada">
+            <div class="item-info"><strong>Empanada Artesanal</strong><span>S/ 9</span></div>
+          </div>
+
+          <div class="menu-item">
+            <img src="imagenes/Croissant.jpg" alt="Croissant">
+            <div class="item-info"><strong>Croissant de Mantequilla</strong><span>S/ 7</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUÉ ELEGIRNOS (tarjetas a la misma altura) -->
+    <section id="why" class="why-section">
+      <div class="container">
+        <h2>¿Por qué elegirnos?</h2>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <img src="imagenes/100.jpeg" alt="Café fresco">
+            <h3>Café 100% peruano</h3>
+            <p>Granos seleccionados, tostados para resaltar notas únicas.</p>
+          </div>
+
+          <div class="why-card">
+            <img src="imagenes/ambiente.jpg" alt="Ambiente acogedor">
+            <h3>Ambiente acogedor</h3>
+            <p>Espacio cálido, perfecto para trabajo o reunión con amigos.</p>
+          </div>
+
+          <div class="why-card">
+            <img src="imagenes/ATENCION.jpg" alt="Atención personalizada">
+            <h3>Atención personalizada</h3>
+            <p>Recomendaciones y servicio atento en cada visita.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO + FORMULARIO DE PEDIDO Y HORARIO/DIRECCIÓN -->
+    <section id="contact" class="contact-section">
+      <div class="container contact-grid">
+        <!-- Formulario de pedido -->
+        <div class="contact-form">
+          <h2>Haz tu pedido</h2>
+          <form action="#" onsubmit="event.preventDefault(); alert('Pedido enviado (demo)');">
+            <label>
+              <span>Tu nombre</span>
+              <input type="text" name="name" required>
+            </label>
+
+            <label>
+              <span>Teléfono / WhatsApp</span>
+              <input type="tel" name="phone" required>
+            </label>
+
+            <label>
+              <span>Tu pedido</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+
+            <button class="btn" type="submit">Enviar pedido</button>
+          </form>
+        </div>
+
+        <!-- Horario y dirección -->
+        <aside class="contact-info">
+          <div class="info-card">
+            <h3>Horario</h3>
+            <p>Lun - Dom · 8:00 AM - 9:00 PM</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Dirección</h3>
+            <p>Av. Ejemplo 123, Miraflores, Lima</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Contacto</h3>
+            <p>+51 987 654 321<br>cafeeangel@example.com</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>© <strong>CAFEE ANGEL</strong> · Hecho con ♥</div>
+        <div class="footer-small">Diseño  · 2025</div>
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+</html>

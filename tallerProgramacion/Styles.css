@@ -1,0 +1,441 @@
+/* ===== VARIABLES GLOBALES ===== */
+:root {
+  --bg-dark: rgba(11,11,11,0.55);
+  --cream: #f3e5ab;
+  --brown: #3e2723;
+  --muted: #e6e6e6;
+  --max-width: 1100px;
+  --container-pad: 18px;
+}
+
+/* ===== RESETEO Y ESTILOS BÁSICOS ===== */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #222;
+  background: #fff;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== CONTENEDOR GENERAL ===== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+/* ===== NAVEGACIÓN ===== */
+.nav {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.mark {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.12);
+  font-size: 22px;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--cream);
+}
+
+/* ===== LINKS DEL MENÚ ===== */
+.menu {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.28s ease;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--cream);
+  transition: width 0.28s ease;
+}
+
+.menu a:hover {
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-3px);
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* Botón especial del menú */
+.menu .cta {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.menu .cta:hover {
+  background: var(--cream);
+  color: var(--brown);
+  transform: translateY(-3px);
+}
+
+/* ===== HERO (PANTALLA PRINCIPAL) ===== */
+.hero {
+  height: 100vh;
+  background: url('imagenes/cozy-coffee-shop-stockcake.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.65) 60%);
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  color: #fff;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: rgba(255,255,255,0.9);
+}
+
+.hero-inner h1 {
+  font-size: clamp(32px, 6vw, 64px);
+  line-height: 1.02;
+  font-weight: 900;
+  margin: 6px 0 12px;
+  color: var(--cream);
+  text-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+.lead {
+  max-width: 760px;
+  margin: 0 auto 18px;
+  color: rgba(255,255,255,0.95);
+  font-size: 16px;
+}
+
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ===== BOTONES ===== */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  background: var(--cream);
+  color: var(--brown);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+  transition: all 0.28s ease;
+}
+
+.btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.5);
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 2px solid var(--cream);
+  color: var(--cream);
+}
+
+.btn.ghost:hover {
+  background: var(--cream);
+  color: var(--brown);
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+  background: #fff;
+  color: #222;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  margin-top: -40px;
+  padding: 40px 0 80px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== SECCIÓN ABOUT ===== */
+.about-section {
+  padding: 48px 0;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+.about-text h2 {
+  font-size: 26px;
+  color: var(--brown);
+  margin-bottom: 12px;
+}
+.about-text p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.about-image img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== SECCIÓN MENÚ (PRODUCTOS) ===== */
+.menu-section {
+  padding: 36px 0;
+}
+.menu-section h2 {
+  text-align: center;
+  font-size: 24px;
+  color: var(--brown);
+  margin-bottom: 20px;
+}
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.menu-item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+}
+.menu-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  background: #faf9f7;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ===== SECCIÓN WHY (VENTAJAS) ===== */
+.why-section {
+  padding: 36px 0;
+  background: #faf9f7;
+}
+.why-section h2 {
+  text-align: center;
+  color: var(--brown);
+  margin-bottom: 20px;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.why-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.why-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+.why-card h3 {
+  color: var(--brown);
+}
+.why-card p {
+  color: #555;
+  flex: 1;
+}
+
+/* ===== SECCIÓN CONTACTO ===== */
+.contact-section {
+  padding: 36px 0;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 28px;
+  align-items: start;
+}
+.contact-form h2 {
+  color: var(--brown);
+  margin-bottom: 12px;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.contact-form label span {
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
+  font-weight: 600;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+.contact-form button {
+  width: 180px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--brown);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.contact-form button:hover {
+  background: #2e1b18;
+}
+
+/* Información de contacto */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.info-card {
+  background: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+.info-card h3 {
+  margin-bottom: 6px;
+  color: var(--brown);
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+}
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: #666;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 980px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .menu-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .menu-grid, .why-grid { grid-template-columns: 1fr; }
+  .nav { top: 12px; left: 12px; right: 12px; }
+  .brand { font-size: 16px; }
+  .hero-inner h1 { font-size: 34px; }
+}
+/* === ANIMACIÓN SUAVE DE ELEVACIÓN EN HOVER === */
+@keyframes liftUpHover {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Aplica el efecto solo al pasar el cursor */
+.menu-item:hover img {
+  animation: liftUpHover 0.5s ease-out forwards;
+  box-shadow: 0 18px 36px rgba(0,0,0,0.2);
+}
